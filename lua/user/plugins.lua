@@ -26,7 +26,8 @@ vim.cmd([[
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
-	return
+  vim.notify("packer call failed!")
+  return
 end
 
 -- Have packer use a popup window
